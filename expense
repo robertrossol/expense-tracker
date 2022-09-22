@@ -101,8 +101,6 @@ class ExpenseData
 
   def expenses_total(result)
     result.map{|expense| expense["amount"].to_f}.reduce(:+)
-    # sql = "SELECT SUM(amount) AS total FROM (#{subquery}) AS expenses;"
-    # @connection.exec(sql)
   end 
 end
 
